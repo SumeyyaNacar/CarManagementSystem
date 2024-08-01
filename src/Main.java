@@ -8,7 +8,6 @@ public class Main {
         start(carManager, scanner);
 
 
-
     }
 
     private static void start(CarManager carManager, Scanner scanner) {
@@ -44,7 +43,6 @@ public class Main {
         } while (select != 0);//kullanici cikis yapana kadar dongu devam etsin
 
         scanner.close();//scanner nesnesini kapattik
-
 
 
     }
