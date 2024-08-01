@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         start(carManager, scanner);
-            
+
 
 
     }
@@ -21,17 +21,18 @@ public class Main {
             System.out.println("2 - Araç arama");
             System.out.println("3 - Araçları listeleme");
             System.out.println("0 - Çıkış...");
-            select = scanner.nextInt();
+            select = scanner.nextInt();//kullanicidan secimi al
+            scanner.nextLine();//temizleme
 
             switch (select) {
                 case 1:
-                    carManager.aracEkleme();
+                    carManager.addCar();
                     break;
                 case 2:
-                    carManager.aracArama();
+                    carManager.searchCar();
                     break;
                 case 3:
-                    carManager.aracListeleme();
+                    carManager.listCar();
                     break;
                 case 0:
                     System.out.println("Tesekkur eder, yine bekleriz");
@@ -40,7 +41,9 @@ public class Main {
                     System.out.println("Hatali giris!!!");
             }
 
-        } while (select != 0);
+        } while (select != 0);//kullanici cikis yapana kadar dongu devam etsin
+
+        scanner.close();//scanner nesnesini kapattik
 
 
 
